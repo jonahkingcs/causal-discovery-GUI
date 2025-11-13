@@ -1,0 +1,285 @@
+/* tool buttons (generic) */
+QToolButton { border: none; padding: 0; }
+QToolButton:hover { background: rgba(0,0,0,0.10); }
+
+
+
+/* global backgrounds */
+QMainWindow, QWidget { background: white; }
+
+
+
+/* tools dock */
+QDockWidget { background: white; border: none; }
+QDockWidget > QWidget { background: white; }
+QDockWidget::title {
+  background: white;
+  padding: 6px 8px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+
+
+/* divider between dock and canvas */
+QMainWindow::separator,
+QMainWindow::separator:horizontal,
+QMainWindow::separator:vertical {
+  background-color: #757575;
+  width: 2px; height: 2px; margin: 0; padding: 0;
+}
+QMainWindow::separator:hover   { background-color: #6f6f6f; }
+QMainWindow::separator:pressed { background-color: #5c5c5c; }
+QSplitter::handle,
+QSplitter::handle:horizontal,
+QSplitter::handle:vertical { background-color: #757575; }
+
+
+
+/* toolbar */
+QToolBar { background: palette(window); border: none; spacing: 6px; }
+QToolBar QToolButton {
+  background: transparent;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+QToolBar QToolButton:hover   { background: rgba(0,0,0,0.08); }
+QToolBar QToolButton:pressed,
+QToolBar QToolButton:checked { background: rgba(0,0,0,0.15); }
+QToolBar::handle { image: none; }
+
+
+
+/* wizard / tutorial buttons subtle border on all sides */
+QDialog QPushButton {
+  background: white;
+  /* faint outline everywhere */
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 6px 14px;
+}
+
+QDialog QPushButton:hover   { background: #f6f6f6; border-color: #cfcfcf; }
+QDialog QPushButton:pressed { background: #ececec; border-color: #bdbdbd; }
+QDialog QPushButton:disabled{ color:#999; background:#fafafa; border-color:#eaeaea; }
+
+
+
+/* inputs in dialogs (give them a full light gray outline) */
+QDialog QLineEdit,
+QDialog QSpinBox,
+QDialog QDoubleSpinBox,
+QDialog QComboBox {
+  background: white;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 4px 6px;
+}
+
+/* slight emphasis when focused */
+QDialog QLineEdit:focus,
+QDialog QSpinBox:focus,
+QDialog QDoubleSpinBox:focus,
+QDialog QComboBox:focus {
+  border-color: #bfc7d8;
+}
+
+/* comboBox dropdown arrow + frame */
+QDialog QComboBox::drop-down {
+  border-left: 1px solid #dcdcdc;
+  width: 22px;
+}
+QDialog QComboBox::down-arrow {
+  image: none;
+}
+
+/* popup menu of the combo */
+QDialog QComboBox QAbstractItemView {
+  background: white;
+  border: 1px solid #dcdcdc;
+  selection-background-color: #e9f3ff;
+  selection-color: #0b2a5b;
+}
+
+
+
+/* status bar */
+QStatusBar {
+  background: white;
+  border-top: 1px solid #e5e5e5;
+  padding: 2px 6px;
+}
+QStatusBar QLabel { color: #555; }
+
+
+
+/* tools list (left panel) */
+QListWidget#toolList {
+  background: white;
+  border: none;
+  padding: 6px;
+  font-size: 12pt;
+  color: #111;
+}
+
+
+
+/* row layout and thin separators */
+QListWidget#toolList::item {
+  padding: 10px 8px;
+  border-bottom: 1px solid #e5e5e5;
+}
+QListWidget#toolList::item:last { border-bottom: 0; }
+/* hover and selected */
+QListWidget#toolList::item:hover {
+  background: #f6f9ff;
+  color: #111;
+}
+QListWidget#toolList::item:selected,
+QListWidget#toolList::item:selected:active,
+QListWidget#toolList::item:selected:!active {
+  background: #e9f3ff;
+  color: #0b2a5b;
+}
+
+
+
+/* generic QListWidget */
+QListWidget {
+  background: white;
+  border: 1px solid #e5e5e5;
+}
+QListWidget::item {
+  padding: 10px 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+QListWidget::item:last { border-bottom: 0; }
+/* generic lists and keep text visible on selection */
+QListWidget::item:selected,
+QListWidget::item:selected:active,
+QListWidget::item:selected:!active {
+  background: #e9f3ff;
+  color: #0b2a5b;
+}
+QListWidget::item:hover {
+  background: #f6f9ff;
+  color: #111;
+}
+
+
+
+/* Scrollbars — global style */
+QScrollBar:vertical {
+  background: #fff;
+  width: 12px;
+  margin: 4px 2px 4px 0;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+}
+QScrollBar::handle:vertical {
+  background: #bfc7d8;
+  border: 1px solid #9fb0c8;
+  min-height: 24px;
+  border-radius: 8px;
+}
+QScrollBar::handle:vertical:hover   { background: #aab6cf; }
+QScrollBar::handle:vertical:pressed { background: #93a3c2; }
+
+QScrollBar:horizontal {
+  background: #fff;
+  height: 12px;
+  margin: 0 4px 2px 4px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+}
+QScrollBar::handle:horizontal {
+  background: #bfc7d8;
+  border: 1px solid #9fb0c8;
+  min-width: 24px;
+  border-radius: 8px;
+}
+QScrollBar::handle:horizontal:hover   { background: #aab6cf; }
+QScrollBar::handle:horizontal:pressed { background: #93a3c2; }
+
+/* Hide little arrow buttons for a cleaner look */
+QScrollBar::add-line,
+QScrollBar::sub-line {
+  width: 0;
+  height: 0;
+  border: none;
+  background: transparent;
+}
+QScrollBar::add-page,
+QScrollBar::sub-page {
+  background: transparent;
+}
+
+/* Neat corner between the two bars */
+QAbstractScrollArea::corner {
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+}
+
+
+
+/* Right dock (“Relationships”) — rounded inputs + button */
+QDockWidget#relationsDock QComboBox,
+QDockWidget#relationsDock QPushButton {
+  background: white;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+QDockWidget#relationsDock QComboBox:focus,
+QDockWidget#relationsDock QPushButton:focus {
+  border-color: #bfc7d8;
+}
+
+/* Hover & pressed for the Explain button and future buttons in this dock */
+QDockWidget#relationsDock QPushButton:hover   { background: #f6f6f6; border-color: #cfcfcf; }
+QDockWidget#relationsDock QPushButton:pressed { background: #ececec; border-color: #bdbdbd; }
+
+/* Combo drop-down area + arrow to match the rounded look */
+QDockWidget#relationsDock QComboBox::drop-down {
+  width: 22px;
+  border-left: 1px solid #dcdcdc;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+QDockWidget#relationsDock QComboBox::down-arrow { image: none; }
+
+
+
+/* better colors for the variable pickers' dropdown (right dock) */
+QDockWidget#relationsDock QComboBox QAbstractItemView {
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  selection-background-color: #e9f3ff;
+  selection-color: #0b2a5b;
+}
+QDockWidget#relationsDock QComboBox QAbstractItemView::item {
+  padding: 6px 8px;
+  color: #111;
+}
+QDockWidget#relationsDock QComboBox QAbstractItemView::item:hover {
+  background: #f6f9ff;
+  color: #0b2a5b;
+}
+QDockWidget#relationsDock QComboBox QAbstractItemView::item:selected,
+QDockWidget#relationsDock QComboBox QAbstractItemView::item:selected:active,
+QDockWidget#relationsDock QComboBox QAbstractItemView::item:selected:!active {
+  background: #e9f3ff;
+  color: #0b2a5b;
+}
+
+
+
+/* green 'Continue…' button used in edge explanation dialog */
+QPushButton#edgeContinue {
+  background:#4CAF50; color:white;
+  border:1px solid #3c8f45; border-radius:6px; padding:6px 14px; font-weight:bold;
+}
+QPushButton#edgeContinue:hover { background:#66BB6A; }
+QPushButton#edgeContinue:pressed { background:#5AAA5F; }
